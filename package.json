@@ -1,0 +1,30 @@
+{
+	"name": "articleexample",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"test": "jest",
+		"start-android": "react-native run-android",
+		"start-ios": "react-native run-ios"
+	},
+	"dependencies": {
+		"eslint": "^4.8.0",
+		"react": "16.0.0-alpha.12",
+		"react-native": "0.48.4",
+		"react-native-firebase": "^3.0.3"
+	},
+	"devDependencies": {
+		"babel-jest": "21.0.2",
+		"babel-preset-react-native": "4.0.0",
+		"eslint-config-callstack-io": "^0.5.0",
+		"jest": "21.1.0",
+		"react-test-renderer": "16.0.0-alpha.12"
+	},
+	"jest": {
+		"preset": "react-native"
+	},
+	"eslintConfig": {
+		"extends": "callstack-io"
+	}
+}
