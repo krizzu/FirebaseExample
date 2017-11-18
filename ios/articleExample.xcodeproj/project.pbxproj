@@ -11,7 +11,7 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		B8EBC0CB1F816B5900E4C8EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8EBC0B51F816B5900E4C8EC /* GoogleService-Info.plist */; };
+		B8CB5FA51FC0B0DE00F23DC1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8CB5FA41FC0B0DE00F23DC1 /* GoogleService-Info.plist */; };
 		B8F5124C1F82767300B352EC /* libPods-articleExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8F5124D1F82767300B352EC /* libPods-articleExample.a */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +31,7 @@
 		42FF7242F369CF3BF6CC22D5 /* Pods-articleExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-articleExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-articleExample/Pods-articleExample.release.xcconfig"; sourceTree = "<group>"; };
 		4588A15B975019E31BF66086 /* Pods-articleExample-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-articleExample-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-articleExample-tvOSTests/Pods-articleExample-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		64CE1EBB3D7EAFD84E002E4E /* libPods-articleExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-articleExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B8EBC0B51F816B5900E4C8EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B8CB5FA41FC0B0DE00F23DC1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B8F512381F82766300B352EC /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F5124D1F82767300B352EC /* libPods-articleExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-articleExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F512541F8276C200B352EC /* libGoogleToolboxForMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleToolboxForMac.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,7 +59,7 @@
 		13B07FAE1A68108700A75B9A /* articleExample */ = {
 			isa = PBXGroup;
 			children = (
-				B8EBC0B51F816B5900E4C8EC /* GoogleService-Info.plist */,
+				B8CB5FA41FC0B0DE00F23DC1 /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -189,7 +189,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				B8EBC0CB1F816B5900E4C8EC /* GoogleService-Info.plist in Resources */,
+				B8CB5FA51FC0B0DE00F23DC1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,13 +246,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-articleExample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

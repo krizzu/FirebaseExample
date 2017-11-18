@@ -28,6 +28,7 @@ target 'articleExample' do
   
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
   pod 'RNFirebase', :path => '../node_modules/react-native-firebase'
 
 end

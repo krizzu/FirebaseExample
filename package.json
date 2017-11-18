@@ -25,6 +25,9 @@
 		"preset": "react-native"
 	},
 	"eslintConfig": {
-		"extends": "callstack-io"
+		"extends": "callstack-io",
+		"rules": {
+			"import/prefer-default-export": 0
+		}
 	}
 }
