@@ -21,6 +21,10 @@ class App extends Component {
     });
   }
 
+  componentWillUnmount() {
+    this._removeListener && this._removeListener();
+  }
+
   _handleRouteChange = route => {
     this.setState(() => ({
       path: route,
@@ -35,7 +39,7 @@ class App extends Component {
         return <CreateUser changeRoute={this._handleRouteChange} />;
       }
       case '/login': {
-        if (userLoggedIn === null) return;
+        if (userLoggedIn === null) return null;
         return userLoggedIn ? (
           <Home changeRoute={this._handleRouteChange} />
         ) : (

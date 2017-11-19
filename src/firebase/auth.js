@@ -14,6 +14,10 @@ export async function createUser(email, password) {
 
   try {
     await auth.createUserWithEmailAndPassword(email, password);
+
+    // Normally, when you create a user, this user will be signed in
+    // For this demo, I'll logout him
+    await logoutUser();
   } catch (e) {
     throw new Error(e.message);
   }
