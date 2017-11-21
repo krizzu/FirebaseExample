@@ -45,7 +45,7 @@ export async function addItemToList(item) {
   const { uid } = firebase.auth().currentUser;
   const data = {
     todo: item,
-    finished: false,
+    timestamp: +Date.now(),
   };
   try {
     await db.ref(uid).push(data);

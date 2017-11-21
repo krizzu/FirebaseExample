@@ -25,7 +25,7 @@ class TodoList extends React.Component {
       </TouchableOpacity>
     );
   };
-  _keyExtractor = item => item.id;
+  _keyExtractor = ({ todoDetails }) => todoDetails.timestamp;
   _handleItemPress = item => () => removeTodo(item);
 
   render() {

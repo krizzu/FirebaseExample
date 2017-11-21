@@ -93,7 +93,7 @@ function resizeImage(file, bucket = BUCKET_NAME) {
   );
 }
 
-exports.handleImageUpload = functions.storage.object().onChange(event => {
+exports.ImageResize = functions.storage.object().onChange(event => {
   const object = event.data;
   const fileBucket = object.bucket;
   const filePath = object.name;
